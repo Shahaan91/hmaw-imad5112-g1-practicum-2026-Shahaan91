@@ -5,6 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#101328"
+    android:backgroundTint="#151618"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,23 +16,173 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+        android:background="#3F51B5"
+        android:backgroundTint="#3F51B5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <EditText
+            android:id="@+id/ntAid"
+            android:layout_width="62dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="334dp"
+            android:ems="10"
+            android:hint="Notes..."
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/btnAdGear"
+            app:layout_constraintEnd_toStartOf="@+id/itAid"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/ntFood"
+            android:layout_width="62dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="34dp"
+            android:ems="10"
+            android:hint="Notes..."
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/ntAid"
+            app:layout_constraintEnd_toStartOf="@+id/inFood"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/ntShelt"
+            android:layout_width="62dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="111dp"
+            android:layout_marginBottom="41dp"
+            android:ems="10"
+            android:hint="Notes..."
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/ntFood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/qtAid"
+            android:layout_width="83dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="334dp"
+            android:ems="10"
+            android:hint="Quantity"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/btnDView"
+            app:layout_constraintStart_toEndOf="@+id/itAid"
+            app:layout_constraintTop_toBottomOf="@+id/qtFood" />
+
+        <EditText
+            android:id="@+id/qtFood"
+            android:layout_width="83dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="7dp"
+            android:ems="10"
+            android:hint="Quantity"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/inFood"
+            app:layout_constraintTop_toBottomOf="@+id/qtShelt" />
+
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnAdGear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="132dp"
-            android:layout_marginEnd="187dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginBottom="32dp"
             android:backgroundTint="#CDDC39"
             android:text="Add Gear"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/itTtl"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="172dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="179dp"
+            android:text="TextView"
+            android:textColor="#DDFFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Total Items Packed: " />
+
+        <Button
+            android:id="@+id/btnDView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="#009688"
+            android:text="Detailed View"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/inShelt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="51dp"
+            android:layout_marginBottom="34dp"
+            android:ems="10"
+            android:hint="Add Shelter item..."
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/inFood"
+            app:layout_constraintTop_toBottomOf="@+id/itTtl"
+            tools:layout_editor_absoluteX="98dp" />
+
+        <EditText
+            android:id="@+id/inFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="35dp"
+            android:ems="10"
+            android:hint="Add Food item..."
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/itAid"
+            app:layout_constraintEnd_toStartOf="@+id/qtFood"
+            app:layout_constraintStart_toEndOf="@+id/ntFood" />
+
+        <EditText
+            android:id="@+id/itAid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="17dp"
+            android:ems="10"
+            android:hint="Add Safety item..."
+            android:inputType="text"
+            app:layout_constraintEnd_toStartOf="@+id/qtAid"
+            app:layout_constraintTop_toBottomOf="@+id/inFood" />
+
+        <EditText
+            android:id="@+id/qtShelt"
+            android:layout_width="83dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="39dp"
+            android:ems="10"
+            android:hint="Quantity"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/qtFood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/inShelt" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
