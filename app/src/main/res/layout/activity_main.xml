@@ -34,7 +34,7 @@
             android:hint="Notes..."
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/btnAdGear"
-            app:layout_constraintEnd_toStartOf="@+id/itAid"
+            app:layout_constraintEnd_toStartOf="@+id/inAid"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
@@ -76,7 +76,7 @@
             android:hint="Quantity"
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/btnDView"
-            app:layout_constraintStart_toEndOf="@+id/itAid"
+            app:layout_constraintStart_toEndOf="@+id/inAid"
             app:layout_constraintTop_toBottomOf="@+id/qtFood" />
 
         <EditText
@@ -105,7 +105,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/itTtl"
+            android:id="@+id/Ttl"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="172dp"
@@ -141,7 +141,7 @@
             android:hint="Add Shelter item..."
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/inFood"
-            app:layout_constraintTop_toBottomOf="@+id/itTtl"
+            app:layout_constraintTop_toBottomOf="@+id/Ttl"
             tools:layout_editor_absoluteX="98dp" />
 
         <EditText
@@ -154,16 +154,16 @@
             android:ems="10"
             android:hint="Add Food item..."
             android:inputType="text"
-            app:layout_constraintBottom_toTopOf="@+id/itAid"
+            app:layout_constraintBottom_toTopOf="@+id/inAid"
             app:layout_constraintEnd_toStartOf="@+id/qtFood"
             app:layout_constraintStart_toEndOf="@+id/ntFood" />
 
         <EditText
-            android:id="@+id/itAid"
+            android:id="@+id/inAid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="17dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="44dp"
             android:ems="10"
             android:hint="Add Safety item..."
             android:inputType="text"
@@ -183,6 +183,19 @@
             app:layout_constraintBottom_toTopOf="@+id/qtFood"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/inShelt" />
+
+        <EditText
+            android:id="@+id/inTtl"
+            android:layout_width="62dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="28dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Ttl"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
